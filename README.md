@@ -7,9 +7,8 @@ A modern, dark Minecraft-themed website for **SHADOW PEAKES** designed to screen
 ## 🚀 Features
 
 1. **Brand Hero & Server Showcase**:
-   - Live Minecraft SMP Status indicator (`play.shadowpeakes.net`).
-   - One-click **Copy Server IP** with toast feedback.
-   - Quick stats and server highlights.
+   - Live Minecraft SMP Crossplay status indicator (1.20 - 1.21+).
+   - Quick stats and server highlights (Active players, 24/7 uptime, Anti-griefing).
 2. **Multi-Step Player Verification Wizard**:
    - **Step 1**: Personal Info (Name, Nickname, Age, Occupation).
    - **Step 2**: Minecraft Setup with dynamic **Java** vs **Bedrock** edition switcher (conditional inputs for IGN, Original/Cracked account type, Game version).

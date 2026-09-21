@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   const mobileToggle = document.getElementById('mobileToggle');
   const navLinks = document.getElementById('navLinks');
-  const copyIpBtn = document.getElementById('copyIpBtn');
-  const serverIpText = document.getElementById('serverIpText');
-  const copyBtnText = document.getElementById('copyBtnText');
 
   // Multi-step elements
   const step1 = document.getElementById('step1');
@@ -106,26 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ----------------------------------------------------
-  // 3. Server IP Copy to Clipboard
-  // ----------------------------------------------------
-  if (copyIpBtn) {
-    copyIpBtn.addEventListener('click', () => {
-      const ip = serverIpText.textContent.trim();
-      navigator.clipboard.writeText(ip).then(() => {
-        copyIpBtn.classList.add('copied');
-        copyBtnText.textContent = 'Copied!';
-        showToast(`Server IP copied: ${ip}`, 'fa-check-double', '#10b981');
-
-        setTimeout(() => {
-          copyIpBtn.classList.remove('copied');
-          copyBtnText.textContent = 'Copy IP';
-        }, 3000);
-      }).catch(() => {
-        showToast(`Could not copy automatically: ${ip}`, 'fa-copy', '#f59e0b');
-      });
-    });
-  }
 
   // ----------------------------------------------------
   // 4. Multi-Step Form Management
