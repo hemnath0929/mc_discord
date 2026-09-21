@@ -1,0 +1,5 @@
+# Robots.txt for Shadow Peakes
+User-agent: *
+Allow: /
+
+Sitemap: https://mc-discord-silk.vercel.app/sitemap.xml
