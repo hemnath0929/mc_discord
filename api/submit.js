@@ -58,7 +58,7 @@ export default async function handler(req, res) {
     const accountBadge = (gameType && gameType.toLowerCase().includes('original'))
       ? '🟢 Original (Premium)'
       : '🟠 Cracked';
-    const embedColor = isJava ? 0x00f0ff : 0x10b981; // Cyan for Java, Emerald for Bedrock
+    const embedColor = isJava ? 0xff2442 : 0xdc2626; // Ruby Red for Java, Crimson for Bedrock
 
     // Construct Discord Rich Embed
     const discordPayload = {

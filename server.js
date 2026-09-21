@@ -101,7 +101,7 @@ const server = http.createServer(async (req, res) => {
         const accountBadge = (gameType && gameType.toLowerCase().includes('original'))
           ? '🟢 Original (Premium)'
           : '🟠 Cracked';
-        const embedColor = isJava ? 0x00f0ff : 0x10b981;
+        const embedColor = isJava ? 0xff2442 : 0xdc2626;
 
         const discordPayload = {
           username: 'Shadow Peakes Whitelist Bot',

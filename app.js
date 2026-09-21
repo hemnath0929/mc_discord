@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ----------------------------------------------------
   // 1. Toast Notification Helper
   // ----------------------------------------------------
-  function showToast(message, icon = 'fa-circle-check', color = '#00f0ff') {
+  function showToast(message, icon = 'fa-circle-check', color = '#ff2442') {
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.style.borderColor = color;
@@ -203,14 +203,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (edition === 'Java') {
       cardJava.classList.add('selected');
       cardBedrock.classList.remove('selected');
-      editionBannerText.innerHTML = '<i class="fa-brands fa-java text-cyan"></i> Configuring details for <strong>Java Edition</strong>';
+      editionBannerText.innerHTML = '<i class="fa-brands fa-java text-red"></i> Configuring details for <strong>Java Edition</strong>';
       gameUsernameLabel.innerHTML = '<i class="fa-solid fa-signature"></i> Minecraft Java In-Game Name (IGN) <span class="req">*</span>';
       gameUsername.placeholder = 'e.g. Dream, Technoblade, Notch';
       gameUsernameHint.textContent = 'Case-sensitive Minecraft username exactly as it appears in-game';
     } else {
       cardBedrock.classList.add('selected');
       cardJava.classList.remove('selected');
-      editionBannerText.innerHTML = '<i class="fa-solid fa-mobile-screen-button text-emerald"></i> Configuring details for <strong>Bedrock Edition</strong>';
+      editionBannerText.innerHTML = '<i class="fa-solid fa-mobile-screen-button text-white"></i> Configuring details for <strong>Bedrock Edition</strong>';
       gameUsernameLabel.innerHTML = '<i class="fa-solid fa-gamepad"></i> Minecraft Bedrock Gamertag <span class="req">*</span>';
       gameUsername.placeholder = 'e.g. ShadowHunter99, Xbox Gamertag';
       gameUsernameHint.textContent = 'Your Microsoft / Xbox Gamertag used for Bedrock & PE crossplay';
@@ -356,16 +356,17 @@ document.addEventListener('DOMContentLoaded', () => {
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 2.2 + 0.8;
         this.speedX = (Math.random() - 0.5) * 0.4;
-        this.speedY = (Math.random() - 0.5) * 0.5 - 0.2;
+        this.speedY = -(Math.random() * 0.6 + 0.2); // Float upward like embers
         this.opacity = Math.random() * 0.6 + 0.2;
-        this.hue = Math.random() > 0.5 ? 186 : 155; // Cyan or Emerald tint
+        this.isWhite = Math.random() > 0.75;
+        this.hue = Math.random() > 0.5 ? 352 : 360; // Crimson and Redstone flame
       }
 
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+        if (this.x < 0 || this.x > canvas.width || this.y < 0) {
           this.reset();
           this.y = canvas.height + 5;
         }
@@ -374,9 +375,15 @@ document.addEventListener('DOMContentLoaded', () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(${this.hue}, 100%, 65%, ${this.opacity})`;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = `hsl(${this.hue}, 100%, 60%)`;
+        if (this.isWhite) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = '#ffffff';
+        } else {
+          ctx.fillStyle = `hsla(${this.hue}, 100%, 60%, ${this.opacity})`;
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = '#ff2442';
+        }
         ctx.fill();
         ctx.shadowBlur = 0;
       }
