@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHADOW PEAKES | Official Minecraft SMP & Verification Portal</title>
+  <meta name="description" content="Join Shadow Peakes Minecraft SMP! Apply for player verification, explore our survival realm, view our sponsors, and join our vibrant Discord community.">
+  <meta name="keywords" content="Minecraft, SMP, Shadow Peakes, Discord, Whitelist, Java, Bedrock, Gaming Community">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glow & Floating Particles Canvas -->
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-emerald"></div>
+  <div class="ambient-glow glow-purple"></div>
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="logo-text">SHADOW <span class="highlight">PEAKES</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item active">Home</a>
+        <a href="#features" class="nav-item">Features</a>
+        <a href="#apply" class="nav-item highlight-link">Whitelist Apply</a>
+        <a href="#sponsors" class="nav-item">Sponsors</a>
+        <a href="#collabs" class="nav-item">Collabs & Ads</a>
+        <a href="#apply" class="btn-nav"><i class="fa-solid fa-user-check"></i> Join Whitelist</a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span class="badge-text">SHADOW PEAKES SMP • 1.20 - 1.21+ CROSSPLAY</span>
+      </div>
+
+      <h1 class="hero-title">
+        FORGE YOUR LEGACY IN <br>
+        <span class="gradient-text">SHADOW PEAKES</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Enter an elite Minecraft Survival Multiplayer realm. Complete our fast player verification to get whitelisted and gain instant access to our private Discord server.
+      </p>
+
+      <!-- Server IP Quick Copy Box -->
+      <div class="server-ip-box">
+        <div class="ip-info">
+          <span class="ip-label"><i class="fa-solid fa-server"></i> SERVER IP:</span>
+          <span class="ip-address" id="serverIpText">play.shadowpeakes.net</span>
+        </div>
+        <button class="btn-copy-ip" id="copyIpBtn" title="Copy server IP">
+          <i class="fa-regular fa-copy"></i>
+          <span id="copyBtnText">Copy IP</span>
+        </button>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#apply" class="btn btn-primary glow-btn">
+          <i class="fa-solid fa-file-signature"></i> Apply for Whitelist
+        </a>
+        <a href="#features" class="btn btn-secondary">
+          <i class="fa-solid fa-compass"></i> Explore Realm
+        </a>
+      </div>
+
+      <!-- Quick Server Stats Banner -->
+      <div class="quick-stats">
+        <div class="stat-card">
+          <i class="fa-solid fa-users text-cyan"></i>
+          <div>
+            <div class="stat-num">500+</div>
+            <div class="stat-lbl">Active Adventurers</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-bolt text-emerald"></i>
+          <div>
+            <div class="stat-num">24/7</div>
+            <div class="stat-lbl">High-Performance Uptime</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-shield-heart text-purple"></i>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Anti-Grief Protection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / ABOUT SECTION -->
+  <section class="features-section" id="features">
+    <div class="section-header">
+      <span class="section-tag">CUSTOM EXPERIENCE</span>
+      <h2 class="section-title">WHY PLAY ON SHADOW PEAKES?</h2>
+      <p class="section-desc">Handcrafted Minecraft survival experience tailored for community, competition, and creativity.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon cyan-glow"><i class="fa-solid fa-gem"></i></div>
+        <h3>Player-Driven Economy</h3>
+        <p>Custom player shops, auction houses, trading hubs, and jobs to build your in-game fortune.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon emerald-glow"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Land Claims & Anti-Grief</h3>
+        <p>Rest easy knowing your massive mega-builds and chests are 100% protected with our claim system.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon purple-glow"><i class="fa-solid fa-dungeon"></i></div>
+        <h3>Custom Dungeons & Bosses</h3>
+        <p>Take on periodic community boss events, dungeon crawls, and loot rare custom-enchanted gear.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon gold-glow"><i class="fa-solid fa-network-wired"></i></div>
+        <h3>Java & Bedrock Crossplay</h3>
+        <p>Play with your friends regardless of whether they are on PC (Java) or Mobile/Console (Bedrock).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MULTI-STEP VERIFICATION & WHITELIST APPLICATION SECTION -->
+  <section class="apply-section" id="apply">
+    <div class="section-header">
+      <span class="section-tag">COMMUNITY ACCESS</span>
+      <h2 class="section-title">PLAYER VERIFICATION PORTAL</h2>
+      <p class="section-desc">Complete the 2-step verification below to automatically submit your details to staff on Discord and unlock our Discord invite.</p>
+    </div>
+
+    <div class="form-wrapper">
+      <!-- Step Indicator Bar -->
+      <div class="step-indicator">
+        <div class="step-item active" id="stepIndicator1">
+          <div class="step-badge">1</div>
+          <span class="step-name">Personal Details</span>
+        </div>
+        <div class="step-line" id="stepLine1"></div>
+        <div class="step-item" id="stepIndicator2">
+          <div class="step-badge">2</div>
+          <span class="step-name">Minecraft Setup</span>
+        </div>
+        <div class="step-line" id="stepLine2"></div>
+        <div class="step-item" id="stepIndicator3">
+          <div class="step-badge">3</div>
+          <span class="step-name">Discord Join</span>
+        </div>
+      </div>
+
+      <!-- Main Form Container -->
+      <div class="form-container">
+        <!-- Error / Info Toast Message Box -->
+        <div class="form-alert" id="formAlert" style="display: none;">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="formAlertText">Please fill in all required fields.</span>
+        </div>
+
+        <form id="whitelistForm" novalidate>
+
+          <!-- ================= STEP 1: PERSONAL DETAILS ================= -->
+          <div class="form-step-content active" id="step1">
+            <div class="step-heading">
+              <h3><i class="fa-solid fa-user-astronaut text-cyan"></i> Step 1: Tell Us About Yourself</h3>
+              <p>Basic information to help our community moderators know who you are.</p>
+            </div>
+
+            <div class="input-grid">
+              <div class="form-group">
+                <label for="playerName"><i class="fa-solid fa-id-card"></i> Your Name <span class="req">*</span></label>
+                <input type="text" id="playerName" name="playerName" placeholder="e.g. Alex or Karthik" required autocomplete="name">
+                <small class="field-hint">Your real or preferred first name</small>
+              </div>
+
+              <div class="form-group">
+                <label for="playerNickname"><i class="fa-solid fa-tag"></i> Nickname / Callout</label>
+                <input type="text" id="playerNickname" name="playerNickname" placeholder="e.g. ShadowHunter, Dex">
+                <small class="field-hint">What do your friends usually call you?</small>
+              </div>
+
+              <div class="form-group">
+                <label for="playerAge"><i class="fa-solid fa-cake-candles"></i> Age <span class="req">*</span></label>
+                <input type="number" id="playerAge" name="playerAge" min="10" max="99" placeholder="e.g. 18" required>
+                <small class="field-hint">Must be 10 years or older</small>
+              </div>
+
+              <div class="form-group">
+                <label for="playerOccupation"><i class="fa-solid fa-briefcase"></i> Occupation <span class="req">*</span></label>
+                <select id="playerOccupation" name="playerOccupation" required>
+                  <option value="" disabled selected>Select your current occupation</option>
+                  <option value="School Student">🎒 School Student</option>
+                  <option value="College / University Student">🎓 College / University</option>
+                  <option value="Working Professional">💼 Working Professional</option>
+                  <option value="Freelancer / Creator">💻 Freelancer / Content Creator</option>
+                  <option value="Other">✨ Other</option>
+                </select>
+                <small class="field-hint">Helps us schedule events around your free time</small>
+              </div>
+            </div>
+
+            <div class="step-footer">
+              <div></div>
+              <button type="button" class="btn btn-primary" id="btnNext1">
+                Next: Minecraft Details <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ================= STEP 2: MINECRAFT DETAILS ================= -->
+          <div class="form-step-content" id="step2">
+            <div class="step-heading">
+              <h3><i class="fa-solid fa-cube text-emerald"></i> Step 2: Minecraft Game Information</h3>
+              <p>Specify which edition and version you play so our whitelist bot can register you.</p>
+            </div>
+
+            <!-- Edition Choice Cards -->
+            <div class="edition-selection-wrapper">
+              <label class="section-label">Select Your Minecraft Edition <span class="req">*</span></label>
+              <div class="edition-cards">
+                <div class="edition-card selected" id="cardJava" data-edition="Java">
+                  <div class="edition-icon"><i class="fa-brands fa-java"></i></div>
+                  <div class="edition-meta">
+                    <h4>Java Edition</h4>
+                    <p>PC, Mac, Linux (Official or Cracked)</p>
+                  </div>
+                  <div class="check-mark"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+
+                <div class="edition-card" id="cardBedrock" data-edition="Bedrock">
+                  <div class="edition-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                  <div class="edition-meta">
+                    <h4>Bedrock Edition</h4>
+                    <p>Mobile (PE), Windows 10/11, Console</p>
+                  </div>
+                  <div class="check-mark"><i class="fa-solid fa-circle-check"></i></div>
+                </div>
+              </div>
+              <input type="hidden" id="selectedEdition" name="selectedEdition" value="Java">
+            </div>
+
+            <!-- Dynamic Edition Fields -->
+            <div class="dynamic-edition-box" id="editionDetailsBox">
+              <div class="edition-banner-header" id="editionBannerText">
+                <i class="fa-brands fa-java text-cyan"></i> Configuring details for <strong>Java Edition</strong>
+              </div>
+
+              <div class="input-grid">
+                <!-- Username Field (Dynamic Label) -->
+                <div class="form-group">
+                  <label for="gameUsername" id="gameUsernameLabel">
+                    <i class="fa-solid fa-signature"></i> Minecraft In-Game Name (IGN) <span class="req">*</span>
+                  </label>
+                  <input type="text" id="gameUsername" name="gameUsername" placeholder="e.g. Notch, Dream" required>
+                  <small class="field-hint" id="gameUsernameHint">Case-sensitive Minecraft username exactly as it appears in-game</small>
+                </div>
+
+                <!-- Account Type: Original vs Cracked -->
+                <div class="form-group">
+                  <label for="gameType"><i class="fa-solid fa-shield"></i> Account Type <span class="req">*</span></label>
+                  <select id="gameType" name="gameType" required>
+                    <option value="Original (Microsoft Account)" selected>🟢 Original (Official Paid Account)</option>
+                    <option value="Cracked (TLauncher / Pojav / Free)">🟠 Cracked (TLauncher, PojavLauncher, etc.)</option>
+                  </select>
+                  <small class="field-hint">Both original and cracked players are welcome!</small>
+                </div>
+
+                <!-- Game Version -->
+                <div class="form-group">
+                  <label for="gameVersion"><i class="fa-solid fa-code-branch"></i> Game Version <span class="req">*</span></label>
+                  <select id="gameVersion" name="gameVersion" required>
+                    <option value="1.21.x (Latest Tricky Trials)" selected>1.21.x (Tricky Trials - Recommended)</option>
+                    <option value="1.20.4">1.20.4 (Trails & Tales)</option>
+                    <option value="1.20.1">1.20.1</option>
+                    <option value="1.19.4">1.19.4</option>
+                    <option value="1.16.5">1.16.5 (Combat / Legacy)</option>
+                  </select>
+                  <small class="field-hint">Our server supports cross-version connectivity</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-footer">
+              <button type="button" class="btn btn-secondary" id="btnBack2">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="submit" class="btn btn-primary glow-btn" id="btnSubmitForm">
+                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Submit Application</span>
+                <span class="btn-spinner" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Dispatching...</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- ================= STEP 3: SUCCESS & DISCORD JOIN ================= -->
+        <div class="form-step-content" id="step3">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="achievement-details">
+              <span class="achievement-sub">APPLICATION SENT!</span>
+              <h4 class="achievement-title">Welcome to Shadow Peakes</h4>
+            </div>
+          </div>
+
+          <div class="success-message-box">
+            <p class="success-p">
+              🎉 <strong>Awesome!</strong> Your verification details have been recorded and dispatched to our Discord moderator channel.
+            </p>
+            <p class="instruction-p">
+              Click the button below to join the <strong>Shadow Peakes Official Discord Server</strong>. Our bot will assist you with roles and server access.
+            </p>
+
+            <!-- Player Application Summary Preview Card -->
+            <div class="player-summary-preview" id="playerSummaryCard">
+              <div class="summary-avatar">
+                <img id="summaryAvatarImg" src="https://mc-heads.net/avatar/MHF_Steve/80" alt="Minecraft Skin Head">
+              </div>
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span class="summary-label">Applicant:</span>
+                  <span class="summary-val" id="summaryName">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">IGN:</span>
+                  <span class="summary-val text-cyan" id="summaryIGN">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Edition:</span>
+                  <span class="summary-val" id="summaryEdition">-</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Status:</span>
+                  <span class="summary-val badge-pending">Pending Discord Verification</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Discord Join CTA Button -->
+            <div class="discord-cta-container">
+              <a href="https://discord.gg/wnVuJzrDn" target="_blank" rel="noopener noreferrer" class="btn btn-discord glow-discord" id="btnJoinDiscord">
+                <i class="fa-brands fa-discord"></i> Join Shadow Peakes Discord
+              </a>
+              <p class="redirect-hint">Link will open in a new tab. Make sure your Discord app is open!</p>
+            </div>
+
+            <div class="restart-wrap">
+              <button type="button" class="btn btn-text-only" id="btnSubmitAnother">
+                <i class="fa-solid fa-rotate-left"></i> Submit another application
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS SECTION -->
+  <section class="sponsors-section" id="sponsors">
+    <div class="section-header">
+      <span class="section-tag">OUR BACKERS</span>
+      <h2 class="section-title">OFFICIAL SPONSORS</h2>
+      <p class="section-desc">Powered by top-tier gaming infrastructure, server hardware, and gaming brands.</p>
+    </div>
+
+    <div class="sponsors-grid">
+      <!-- Sponsor 1 -->
+      <div class="sponsor-card tier-netherite">
+        <div class="sponsor-tier-badge"><i class="fa-solid fa-gem"></i> NETHERITE SPONSOR</div>
+        <div class="sponsor-logo-box">
+          <i class="fa-solid fa-server sponsor-icon"></i>
+          <h3>ApexNode Hosting</h3>
+        </div>
+        <p class="sponsor-desc">High-speed Ryzen 9 dedicated servers ensuring lag-free 20 TPS gameplay for all players.</p>
+        <div class="sponsor-link">
+          <span>Official Host Partner</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+
+      <!-- Sponsor 2 -->
+      <div class="sponsor-card tier-diamond">
+        <div class="sponsor-tier-badge"><i class="fa-solid fa-shield-halved"></i> DIAMOND SPONSOR</div>
+        <div class="sponsor-logo-box">
+          <i class="fa-solid fa-bolt-lightning sponsor-icon text-cyan"></i>
+          <h3>Vortex Energy</h3>
+        </div>
+        <p class="sponsor-desc">Premium fuel for competitive gamers. Sponsoring weekly tournaments and custom event prizes.</p>
+        <div class="sponsor-link">
+          <span>Official Drink Partner</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+
+      <!-- Sponsor 3 -->
+      <div class="sponsor-card tier-gold">
+        <div class="sponsor-tier-badge"><i class="fa-solid fa-coins"></i> GOLD SPONSOR</div>
+        <div class="sponsor-logo-box">
+          <i class="fa-solid fa-headset sponsor-icon text-gold"></i>
+          <h3>Titan Gaming Gear</h3>
+        </div>
+        <p class="sponsor-desc">Custom mechanical keyboards and headsets for peak gaming performance and precision.</p>
+        <div class="sponsor-link">
+          <span>Gear & Hardware Partner</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sponsor Callout Banner -->
+    <div class="sponsor-cta-banner">
+      <div class="banner-content">
+        <h3><i class="fa-solid fa-handshake"></i> Interested in Sponsoring Shadow Peakes?</h3>
+        <p>Promote your brand, hosting platform, or gaming project to hundreds of passionate daily players.</p>
+      </div>
+      <a href="#apply" class="btn btn-secondary">
+        <i class="fa-solid fa-envelope"></i> Partner With Us
+      </a>
+    </div>
+  </section>
+
+  <!-- COLLABS & ADVERTISING SECTION -->
+  <section class="collabs-section" id="collabs">
+    <div class="section-header">
+      <span class="section-tag">COMMUNITY ALLIANCES</span>
+      <h2 class="section-title">CREATOR COLLABS & PARTNERS</h2>
+      <p class="section-desc">Streamers, YouTubers, and allied Minecraft servers creating memories together.</p>
+    </div>
+
+    <div class="collabs-grid">
+      <!-- Collab 1 -->
+      <div class="collab-card">
+        <div class="collab-tag"><i class="fa-brands fa-youtube text-red"></i> YOUTUBE PARTNER</div>
+        <div class="collab-header">
+          <div class="collab-avatar">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <div>
+            <h4>PixelCraft Studio</h4>
+            <span class="collab-meta">120K Subscribers</span>
+          </div>
+        </div>
+        <p class="collab-bio">Weekly Shadow Peakes SMP live streams, survival building tutorials, and raid adventures.</p>
+        <div class="collab-status"><span class="status-live">●</span> Active Creator</div>
+      </div>
+
+      <!-- Collab 2 -->
+      <div class="collab-card">
+        <div class="collab-tag"><i class="fa-brands fa-twitch text-purple"></i> TWITCH ALLIANCE</div>
+        <div class="collab-header">
+          <div class="collab-avatar">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <div>
+            <h4>ViperSlayer Live</h4>
+            <span class="collab-meta">Twitch Partner</span>
+          </div>
+        </div>
+        <p class="collab-bio">Competitive PvP player hosting weekly Netherite duels and community bounty hunts on our server.</p>
+        <div class="collab-status"><span class="status-verified"><i class="fa-solid fa-check"></i></span> Verified Partner</div>
+      </div>
+
+      <!-- Collab 3 -->
+      <div class="collab-card ad-card">
+        <div class="collab-tag"><i class="fa-solid fa-bullhorn"></i> AD DISPLAY SPOT</div>
+        <div class="collab-header">
+          <div class="collab-avatar ad-avatar">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div>
+            <h4>Your Brand / Stream Here</h4>
+            <span class="collab-meta">Premium Ad Slot</span>
+          </div>
+        </div>
+        <p class="collab-bio">Feature your YouTube channel, Twitch stream, or Minecraft brand right on this spot!</p>
+        <a href="https://discord.gg/wnVuJzrDn" target="_blank" class="ad-action-btn">
+          Inquire on Discord <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-shield-halved"></i></span>
+          <span class="logo-text">SHADOW <span class="highlight">PEAKES</span></span>
+        </div>
+        <p class="footer-desc">
+          The ultimate Minecraft Survival Multiplayer community. Safe, moderated, and built for true survival enthusiasts.
+        </p>
+        <div class="social-links">
+          <a href="https://discord.gg/wnVuJzrDn" target="_blank" aria-label="Discord Server"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" aria-label="YouTube Channel"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Server Features</a></li>
+          <li><a href="#apply">Whitelist Verification</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#collabs">Collabs & Ads</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Server Connect</h4>
+        <div class="footer-ip-block">
+          <p class="footer-ip-title">Java & Bedrock IP:</p>
+          <code>play.shadowpeakes.net</code>
+          <p class="footer-port">Bedrock Port: <code>19132</code></p>
+        </div>
+        <a href="#apply" class="footer-btn">Apply Now</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SHADOW PEAKES. All rights reserved.</p>
+      <p class="disclaimer">Not an official Minecraft product. We are not approved by or associated with Mojang or Microsoft.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

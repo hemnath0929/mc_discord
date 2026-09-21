@@ -1,0 +1,12 @@
+{
+  "name": "shadow-peakes-web",
+  "version": "1.0.0",
+  "description": "Shadow Peakes Minecraft Community & Whitelist Verification Portal",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["minecraft", "discord", "whitelist", "shadow-peakes"],
+  "author": "",
+  "license": "ISC"
+}
