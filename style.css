@@ -1234,9 +1234,9 @@ h1, h2, h3, h4 {
 }
 
 .collab-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-sm);
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-md);
   background: rgba(255, 36, 66, 0.16);
   display: flex;
   align-items: center;
@@ -1244,6 +1244,22 @@ h1, h2, h3, h4 {
   font-size: 1.6rem;
   color: var(--accent-red);
   flex-shrink: 0;
+  overflow: hidden;
+  border: 2px solid rgba(255, 36, 66, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.collab-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.collab-card:hover .collab-avatar-img {
+  transform: scale(1.1);
 }
 
 .collab-header h4 {
@@ -1259,9 +1275,71 @@ h1, h2, h3, h4 {
 .collab-bio {
   font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   flex-grow: 1;
   line-height: 1.6;
+}
+
+/* Creator Social Buttons */
+.collab-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.collab-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 15px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.social-yt {
+  background: rgba(255, 0, 0, 0.14);
+  color: #ff4d4d;
+  border-color: rgba(255, 0, 0, 0.32);
+}
+
+.social-yt:hover {
+  background: #ff0000;
+  color: #ffffff;
+  border-color: #ff0000;
+  box-shadow: 0 4px 16px rgba(255, 0, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.social-ig {
+  background: rgba(225, 48, 108, 0.14);
+  color: #ff6097;
+  border-color: rgba(225, 48, 108, 0.32);
+}
+
+.social-ig:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(225, 48, 108, 0.45);
+  transform: translateY(-2px);
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+.text-pink {
+  color: #e1306c;
+}
+
+.text-purple {
+  color: #9146ff;
 }
 
 .collab-status {
@@ -1280,6 +1358,26 @@ h1, h2, h3, h4 {
 
 .status-verified {
   color: #ffffff;
+}
+
+/* Collab / Ad Callout Banner */
+.collab-cta-banner {
+  margin-top: 44px;
+  background: linear-gradient(135deg, rgba(16, 17, 24, 0.92), rgba(35, 18, 25, 0.92));
+  border: 1px dashed rgba(255, 36, 66, 0.45);
+  border-radius: var(--radius-lg);
+  padding: 34px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  backdrop-filter: blur(14px);
+  flex-wrap: wrap;
+  transition: border-color var(--transition-normal);
+}
+
+.collab-cta-banner:hover {
+  border-color: var(--accent-red);
 }
 
 /* Ad Spot Card */
@@ -1536,13 +1634,15 @@ h1, h2, h3, h4 {
     gap: 20px;
   }
 
-  .sponsor-cta-banner {
+  .sponsor-cta-banner,
+  .collab-cta-banner {
     flex-direction: column;
     text-align: center;
     padding: 28px 24px;
   }
 
-  .sponsor-cta-banner .btn {
+  .sponsor-cta-banner .btn,
+  .collab-cta-banner .btn {
     width: 100%;
   }
 
