@@ -1311,15 +1311,15 @@ h1, h2, h3, h4 {
 
 .collabs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .collab-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 34px 28px;
+  padding: 30px 22px;
   backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
@@ -1665,7 +1665,13 @@ h1, h2, h3, h4 {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* ================= MULTI-DEVICE RESPONSIVE BREAKPOINTS ================= */
+/* Medium Laptops & Desktops (max-width: 1140px) */
+@media (max-width: 1140px) {
+  .collabs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
 
 /* Tablets & Small Laptops (max-width: 1024px) */
 @media (max-width: 1024px) {
